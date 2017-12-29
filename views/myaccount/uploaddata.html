@@ -1,0 +1,131 @@
+{{template "base/myaccount.html" .}}
+{{define "title"}}
+<title>数据上传</title>
+{{end}}
+
+{{define "functionname"}}
+<h2>数据上传</h2>
+{{end}}
+{{define "content"}}
+<div class="woocommerce"> 
+    去数据商城看看？ <a class="showcoupon" data-toggle="collapse" href="/" aria-expanded="false" aria-controls="coupon-collapse-wrap">点击进行跳转</a>  
+</div>
+<form action="/uploaddata/upload" method="post" class="center" id="uploaddataform" name="uploaddataform">
+
+    <div id="customer_details" class="col2-set">
+        <div class="col-3">
+            <div class="woocommerce-billing-fields">
+                <h3>上传数据</h3>
+                <p id="billing_country_field" class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
+                    <label class="" for="billing_country">数据分类 <abbr title="required" class="required">*</abbr>
+                    </label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;一级分类：<select class="country_to_state country_select" id="class_first" name="classes1" onchange="addtoselect(this)">
+                        <option value="" onselect="true">请选择</option>
+                        {{range $index, $elem := .classes}}
+                        <option value="{{$elem.Id}}">{{$elem.Name}}</option>
+                        {{end}}
+                    </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp; 二级分类：<select class="country_to_state country_select" id="class_second" name="classes2" style="display: none;">
+                    </select>
+                    
+                </p>
+
+                <p id="billing_company_field" class="form-row form-row-wide">
+                    <label class="" for="billing_company">名称：</label>
+                    <input class="form-control" type="input-text" name="name"></input>
+                </p>
+                <p id="billing_company_field" class="form-row form-row-wide">
+                    <label class="" for="billing_company">简介：</label>
+                    <input class="form-control" type="input-text" name="primary"></input>
+                </p>
+                <div class="clear"></div>
+
+                <p id="billing_company_field" class="form-row form-row-wide">
+                    <label class="" for="billing_company">数据说明：</label>
+                    <textarea class="form-control" name="introduce" rows="3"></textarea>
+                </p>
+                
+                
+                <div class="clear"></div>
+
+                <p id="billing_company_field" class="form-row form-row-wide">
+                    <label class="" for="billing_company">选择文件</label>
+                    <input type="file" value="" placeholder="" id="billing_company" name="myfile" class="input-text ">
+                </p>
+                <br>
+                <div class="create-account">
+                    <p>提交需求，需要再次确认登陆，确认是否本人操作，请输入当前登录账号的密码</p>
+                    <p id="account_password_field" class="form-row validate-required">
+                        <label class="" for="account_password">Account password <abbr title="required" class="required">*</abbr>
+                        </label>
+                        <input type="password" value="" placeholder="Password" id="account_password" name="account_password" class="input-text">
+                    </p>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+        </div>
+
+       <!--  <div class="col-2">
+            <div class="woocommerce-shipping-fields">
+                </div>
+            </div> -->
+
+        </div>
+
+    </div>
+
+    <div id="order_review" style="position: relative;">
+
+            <div class="form-row place-order">
+
+                <button type="submit" data-value="Place order" value="确认提交" id="place_order" name="woocommerce_checkout_place_order" class="button alt">
+                   确认提交 </button>
+            </div>
+        </div>
+    </div>
+</form>
+{{end}}
+
+<script type="text/javascript">
+    /*$(document).ready(function(){
+        $('#uploaddataform').bind('submit', function(){
+            $(this).ajaxSubmit({ 
+               success: function(msg) { 
+                        if (msg.result) {
+                            alert(msg.msg);
+                            Store.save("username",user_name);
+                            window.location = msg.refer;
+                        } else{
+                            alert(msg.msg);
+                        };
+                     }
+                //$(this).resetForm(); // 提交后重置表单
+            });
+            return false
+        });
+    });*/
+
+
+   function addtoselect(obj) {
+            $.ajax({
+                type : "post",
+                url : "/uploaddata/loadclass",
+                data : {
+                    "id" : obj.value
+                },
+                success : function(data) {
+                    jsonStr = obj.value;
+                    $("#class_second").show();
+                    $("#class_second").empty();
+                    $("#class_second").append("<option value=''>----</option>");             
+                    for (var i = 0; i < data.length; i++) {
+ 
+                     $("#class_second").append("<option value='"+data[i].Id+"'>"+data[i].Name+"</option>");
+                    }
+                }
+            });
+    }
+        
+</script>
+

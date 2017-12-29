@@ -1,0 +1,83 @@
+{{template "inc/T.hander.tpl" .}}
+     {{template "title" .}}
+  </head>
+  <body>
+   
+   {{template "inc/T.item.tpl" .}}
+    <div class="site-branding-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo">
+                        <h1><a href="./"><img src="../static/img/logo.png"></a></h1>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6">
+                    <div class="shopping-item">
+                        <a href="/cart">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End site branding area -->
+    
+    
+    
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        {{template "functionname" .}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                
+                {{template "inc/T.functionleft.tpl" .}}
+                  
+
+                  {{template "content" .}} 
+             
+                        
+                        <div class="related-products-wrapper">
+                            <h2 class="related-products-title">相似产品推荐</h2>
+                            <div class="related-products-carousel">
+                                {{range .similarData}}
+                                <div class="single-product">
+                                    <div class="product-f-image">
+                                        <img src="../{{.Location}}" alt="">
+                                        <div class="product-hover">
+                                            <a href="/cartop=add&dataId={{.Id}}&userId={{$.username}}" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> 添加到购物车</a>
+                                            <a href="" class="view-details-link"><i class="fa fa-link"></i>查看详情</a>
+                                        </div>
+                                    </div>
+
+                                    <h2><a href="">{{.Name}}</a></h2>
+
+                                    <div class="product-carousel-price">
+                                        <ins>{{.Price}}</ins> <del>{{.PriceNow}}</del>
+                                    </div> 
+                                </div>
+                                {{end}}
+                                
+                                                                 
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+   {{template "inc/T.foot.tpl" .}}

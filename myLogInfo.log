@@ -1,0 +1,204 @@
+InfofE:/GoWorkspace/src/logging/console_logger.go:87: [INFO] dataServer/vendor/webcrawler/downloader.(*myPageDownloader).Download : (downloader.go:51) - Do the request (url=http://studygolang.com/topics)... 
+InfolnE:/GoWorkspace/src/logging/console_logger.go:96: [INFO] dataServer/vendor/webcrawler/demo.record : (demo.go:217) - Monitor - Collected information[1]:
+  Goroutine number: 15
+  Scheduler:
+    Running: true 
+    Channel args: { reqChanLen: 10, respChanLen: 10, itemChanLen: 10, errorChanLen: 10 } 
+    Pool base args: { pageDownloaderPoolSize: 3, analyzerPoolSize: 3 } 
+    Crawl depth: 1 
+    Channels manager: status: initialized, requestChannel: 0/10, responseChannel: 0/10, itemChannel: 0/10, errorChannel: 0/10 
+    Request cache: status: running, length: 0, capacity: 0
+    Downloader pool: 0/3
+    Analyzer pool: 0/3
+    Item pipeline: failFast///快速失败: false, processorNumber: 1, sent: 0, accepted: 0, processed: 0, processingNumber: 0
+    Urls(0): <concealed>
+    Stop sign: signed: false
+  Escaped time: 1.0002ms
+
+InfolnE:/GoWorkspace/src/logging/console_logger.go:96: [INFO] dataServer/vendor/webcrawler/demo.record : (demo.go:217) - Monitor - Collected information[2]:
+  Goroutine number: 23
+  Scheduler:
+    Running: true 
+    Channel args: { reqChanLen: 10, respChanLen: 10, itemChanLen: 10, errorChanLen: 10 } 
+    Pool base args: { pageDownloaderPoolSize: 3, analyzerPoolSize: 3 } 
+    Crawl depth: 1 
+    Channels manager: status: initialized, requestChannel: 0/10, responseChannel: 0/10, itemChannel: 0/10, errorChannel: 0/10 
+    Request cache: status: running, length: 0, capacity: 0
+    Downloader pool: 1/3
+    Analyzer pool: 0/3
+    Item pipeline: failFast///快速失败: true, processorNumber: 1, sent: 0, accepted: 0, processed: 0, processingNumber: 0
+    Urls(0): <concealed>
+    Stop sign: signed: false
+  Escaped time: 5.0002ms
+
+InfolnE:/GoWorkspace/src/logging/console_logger.go:96: [INFO] dataServer/vendor/webcrawler/demo.record : (demo.go:217) - Monitor - Collected information[3]:
+  Goroutine number: 22
+  Scheduler:
+    Running: true 
+    Channel args: { reqChanLen: 10, respChanLen: 10, itemChanLen: 10, errorChanLen: 10 } 
+    Pool base args: { pageDownloaderPoolSize: 3, analyzerPoolSize: 3 } 
+    Crawl depth: 1 
+    Channels manager: status: initialized, requestChannel: 0/10, responseChannel: 0/10, itemChannel: 0/10, errorChannel: 0/10 
+    Request cache: status: running, length: 0, capacity: 0
+    Downloader pool: 1/3
+    Analyzer pool: 0/3
+    Item pipeline: failFast///快速失败: true, processorNumber: 1, sent: 0, accepted: 0, processed: 0, processingNumber: 0
+    Urls(0): <concealed>
+    Stop sign: signed: false
+  Escaped time: 30.001ms
+
+InfolnE:/GoWorkspace/src/logging/console_logger.go:96: [INFO] dataServer/vendor/webcrawler/demo.record : (demo.go:217) - Monitor - Collected information[4]:
+  Goroutine number: 24
+  Scheduler:
+    Running: true 
+    Channel args: { reqChanLen: 10, respChanLen: 10, itemChanLen: 10, errorChanLen: 10 } 
+    Pool base args: { pageDownloaderPoolSize: 3, analyzerPoolSize: 3 } 
+    Crawl depth: 1 
+    Channels manager: status: initialized, requestChannel: 0/10, responseChannel: 0/10, itemChannel: 0/10, errorChannel: 0/10 
+    Request cache: status: running, length: 0, capacity: 0
+    Downloader pool: 1/3
+    Analyzer pool: 0/3
+    Item pipeline: failFast///快速失败: true, processorNumber: 1, sent: 0, accepted: 0, processed: 0, processingNumber: 0
+    Urls(0): <concealed>
+    Stop sign: signed: false
+  Escaped time: 69.0026ms
+
+InfolnE:/GoWorkspace/src/logging/console_logger.go:96: [INFO] dataServer/vendor/webcrawler/demo.record : (demo.go:217) - Monitor - Collected information[5]:
+  Goroutine number: 23
+  Scheduler:
+    Running: true 
+    Channel args: { reqChanLen: 10, respChanLen: 10, itemChanLen: 10, errorChanLen: 10 } 
+    Pool base args: { pageDownloaderPoolSize: 3, analyzerPoolSize: 3 } 
+    Crawl depth: 1 
+    Channels manager: status: initialized, requestChannel: 0/10, responseChannel: 0/10, itemChannel: 0/10, errorChannel: 0/10 
+    Request cache: status: running, length: 0, capacity: 0
+    Downloader pool: 1/3
+    Analyzer pool: 0/3
+    Item pipeline: failFast///快速失败: true, processorNumber: 1, sent: 0, accepted: 0, processed: 0, processingNumber: 0
+    Urls(0): <concealed>
+    Stop sign: signed: false
+  Escaped time: 83.0046ms
+
+InfolnE:/GoWorkspace/src/logging/console_logger.go:96: [INFO] dataServer/vendor/webcrawler/demo.record : (demo.go:217) - Monitor - Collected information[6]:
+  Goroutine number: 24
+  Scheduler:
+    Running: true 
+    Channel args: { reqChanLen: 10, respChanLen: 10, itemChanLen: 10, errorChanLen: 10 } 
+    Pool base args: { pageDownloaderPoolSize: 3, analyzerPoolSize: 3 } 
+    Crawl depth: 1 
+    Channels manager: status: initialized, requestChannel: 0/10, responseChannel: 0/10, itemChannel: 0/10, errorChannel: 0/10 
+    Request cache: status: running, length: 0, capacity: 0
+    Downloader pool: 1/3
+    Analyzer pool: 0/3
+    Item pipeline: failFast///快速失败: true, processorNumber: 1, sent: 0, accepted: 0, processed: 0, processingNumber: 0
+    Urls(0): <concealed>
+    Stop sign: signed: false
+  Escaped time: 90.0042ms
+
+InfolnE:/GoWorkspace/src/logging/console_logger.go:96: [INFO] dataServer/vendor/webcrawler/demo.record : (demo.go:217) - Monitor - Collected information[7]:
+  Goroutine number: 23
+  Scheduler:
+    Running: true 
+    Channel args: { reqChanLen: 10, respChanLen: 10, itemChanLen: 10, errorChanLen: 10 } 
+    Pool base args: { pageDownloaderPoolSize: 3, analyzerPoolSize: 3 } 
+    Crawl depth: 1 
+    Channels manager: status: initialized, requestChannel: 0/10, responseChannel: 0/10, itemChannel: 0/10, errorChannel: 0/10 
+    Request cache: status: running, length: 0, capacity: 0
+    Downloader pool: 1/3
+    Analyzer pool: 0/3
+    Item pipeline: failFast///快速失败: true, processorNumber: 1, sent: 0, accepted: 0, processed: 0, processingNumber: 0
+    Urls(0): <concealed>
+    Stop sign: signed: false
+  Escaped time: 181.0092ms
+
+InfofE:/GoWorkspace/src/logging/console_logger.go:87: [INFO] dataServer/vendor/webcrawler/analyzer.(*myAnalyzer).Analyze : (analyzer.go:59) - Parse the response ///解析响应(reqUrl=https://studygolang.com/topics)... 
+InfolnE:/GoWorkspace/src/logging/console_logger.go:96: [INFO] dataServer/vendor/webcrawler/demo.record : (demo.go:217) - Monitor - Collected information[8]:
+  Goroutine number: 23
+  Scheduler:
+    Running: true 
+    Channel args: { reqChanLen: 10, respChanLen: 10, itemChanLen: 10, errorChanLen: 10 } 
+    Pool base args: { pageDownloaderPoolSize: 3, analyzerPoolSize: 3 } 
+    Crawl depth: 1 
+    Channels manager: status: initialized, requestChannel: 0/10, responseChannel: 0/10, itemChannel: 0/10, errorChannel: 0/10 
+    Request cache: status: running, length: 0, capacity: 0
+    Downloader pool: 0/3
+    Analyzer pool: 1/3
+    Item pipeline: failFast///快速失败: true, processorNumber: 1, sent: 0, accepted: 0, processed: 0, processingNumber: 0
+    Urls(0): <concealed>
+    Stop sign: signed: false
+  Escaped time: 720.5183ms
+
+InfolnE:/GoWorkspace/src/logging/console_logger.go:96: [INFO] dataServer/vendor/webcrawler/demo.record : (demo.go:217) - Monitor - Collected information[9]:
+  Goroutine number: 26
+  Scheduler:
+    Running: true 
+    Channel args: { reqChanLen: 10, respChanLen: 10, itemChanLen: 10, errorChanLen: 10 } 
+    Pool base args: { pageDownloaderPoolSize: 3, analyzerPoolSize: 3 } 
+    Crawl depth: 1 
+    Channels manager: status: initialized, requestChannel: 0/10, responseChannel: 0/10, itemChannel: 6/10, errorChannel: 0/10 
+    Request cache: status: running, length: 0, capacity: 0
+    Downloader pool: 0/3
+    Analyzer pool: 1/3
+    Item pipeline: failFast///快速失败: true, processorNumber: 1, sent: 0, accepted: 0, processed: 0, processingNumber: 0
+    Urls(0): <concealed>
+    Stop sign: signed: false
+  Escaped time: 746.52ms
+
+InfolnE:/GoWorkspace/src/logging/console_logger.go:96: [INFO] dataServer/vendor/webcrawler/demo.record : (demo.go:217) - Monitor - Collected information[10]:
+  Goroutine number: 69
+  Scheduler:
+    Running: true 
+    Channel args: { reqChanLen: 10, respChanLen: 10, itemChanLen: 10, errorChanLen: 10 } 
+    Pool base args: { pageDownloaderPoolSize: 3, analyzerPoolSize: 3 } 
+    Crawl depth: 1 
+    Channels manager: status: initialized, requestChannel: 0/10, responseChannel: 0/10, itemChannel: 0/10, errorChannel: 0/10 
+    Request cache: status: running, length: 0, capacity: 0
+    Downloader pool: 0/3
+    Analyzer pool: 0/3
+    Item pipeline: failFast///快速失败: true, processorNumber: 1, sent: 47, accepted: 47, processed: 0, processingNumber: 47
+    Urls(0): <concealed>
+    Stop sign: signed: false
+  Escaped time: 749.4872ms
+
+FatalE:/GoWorkspace/src/logging/console_logger.go:51: [FATAL] dataServer/vendor/webcrawler/scheduler.(*myScheduler).openItemPipeline.func1.1.1 : (scheduler.go:329) - Fatal Item Processing Error: runtime error: invalid memory address or nil pointer dereference
+InfolnE:/GoWorkspace/src/logging/console_logger.go:96: [INFO] dataServer/vendor/webcrawler/demo.record : (demo.go:217) - Monitor - Collected information[11]:
+  Goroutine number: 68
+  Scheduler:
+    Running: true 
+    Channel args: { reqChanLen: 10, respChanLen: 10, itemChanLen: 10, errorChanLen: 10 } 
+    Pool base args: { pageDownloaderPoolSize: 3, analyzerPoolSize: 3 } 
+    Crawl depth: 1 
+    Channels manager: status: initialized, requestChannel: 0/10, responseChannel: 0/10, itemChannel: 0/10, errorChannel: 0/10 
+    Request cache: status: running, length: 0, capacity: 0
+    Downloader pool: 0/3
+    Analyzer pool: 0/3
+    Item pipeline: failFast///快速失败: true, processorNumber: 1, sent: 47, accepted: 47, processed: 0, processingNumber: 46
+    Urls(0): <concealed>
+    Stop sign: signed: false
+  Escaped time: 773.4883ms
+
+FatalE:/GoWorkspace/src/logging/console_logger.go:51: [FATAL] dataServer/vendor/webcrawler/scheduler.(*myScheduler).openItemPipeline.func1.1.1 : (scheduler.go:329) - Fatal Item Processing Error: runtime error: invalid memory address or nil pointer dereference
+FatalE:/GoWorkspace/src/logging/console_logger.go:51: [FATAL] dataServer/vendor/webcrawler/scheduler.(*myScheduler).openItemPipeline.func1.1.1 : (scheduler.go:329) - Fatal Item Processing Error: runtime error: invalid memory address or nil pointer dereference
+FatalE:/GoWorkspace/src/logging/console_logger.go:51: [FATAL] dataServer/vendor/webcrawler/scheduler.(*myScheduler).openItemPipeline.func1.1.1 : (scheduler.go:329) - Fatal Item Processing Error: runtime error: invalid memory address or nil pointer dereference
+FatalE:/GoWorkspace/src/logging/console_logger.go:51: [FATAL] dataServer/vendor/webcrawler/scheduler.(*myScheduler).openItemPipeline.func1.1.1 : (scheduler.go:329) - Fatal Item Processing Error: runtime error: invalid memory address or nil pointer dereference
+InfolnE:/GoWorkspace/src/logging/console_logger.go:96: [INFO] dataServer/vendor/webcrawler/demo.record : (demo.go:217) - Monitor - Collected information[12]:
+  Goroutine number: 64
+  Scheduler:
+    Running: true 
+    Channel args: { reqChanLen: 10, respChanLen: 10, itemChanLen: 10, errorChanLen: 10 } 
+    Pool base args: { pageDownloaderPoolSize: 3, analyzerPoolSize: 3 } 
+    Crawl depth: 1 
+    Channels manager: status: initialized, requestChannel: 0/10, responseChannel: 0/10, itemChannel: 0/10, errorChannel: 0/10 
+    Request cache: status: running, length: 0, capacity: 0
+    Downloader pool: 0/3
+    Analyzer pool: 0/3
+    Item pipeline: failFast///快速失败: true, processorNumber: 1, sent: 47, accepted: 47, processed: 0, processingNumber: 38
+    Urls(0): <concealed>
+    Stop sign: signed: false
+  Escaped time: 880.5266ms
+
+FatalE:/GoWorkspace/src/logging/console_logger.go:51: [FATAL] dataServer/vendor/webcrawler/scheduler.(*myScheduler).openItemPipeline.func1.1.1 : (scheduler.go:329) - Fatal Item Processing Error: runtime error: invalid memory address or nil pointer dereference
+FatalE:/GoWorkspace/src/logging/console_logger.go:51: [FATAL] dataServer/vendor/webcrawler/scheduler.(*myScheduler).openItemPipeline.func1.1.1 : (scheduler.go:329) - Fatal Item Processing Error: runtime error: invalid memory address or nil pointer dereference
+FatalE:/GoWorkspace/src/logging/console_logger.go:51: [FATAL] dataServer/vendor/webcrawler/scheduler.(*myScheduler).openItemPipeline.func1.1.1 : (scheduler.go:329) - Fatal Item Processing Error: runtime error: invalid memory address or nil pointer dereference
+FatalE:/GoWorkspace/src/logging/console_logger.go:51: [FATAL] dataServer/vendor/webcrawler/scheduler.(*myScheduler).openItemPipeline.func1.1.1 : (scheduler.go:329) - Fatal Item Processing Error: runtime error: invalid memory address or nil pointer dereference
+FatalE:/GoWorkspace/src/logging/console_logger.go:51: [FATAL] dataServer/vendor/webcrawler/scheduler.(*myScheduler).openItemPipeline.func1.1.1 : (scheduler.go:329) - Fatal Item Processing Error: runtime error: invalid memory address or nil pointer dereference

@@ -1,0 +1,60 @@
+#form1{
+	text-align: center;
+	margin: 38px 0;
+}
+#form1 li{
+	margin-left: 10px;
+}
+.page{
+	display:inline-block;
+	/* border:1px solid #e4e4e4;
+	color:#0078d0; */
+	font-size: 12px;
+	text-align: center;
+	line-height: 29px;
+	margin:0 5px;
+	width:29px;
+	height:29px;
+}
+.page a{
+	display:inline-block;
+	width:100%;
+	height:100%;
+	color:#666;
+}
+#form1 a:hover{
+	color:#2183e2;
+}
+.first,.last{
+	display:inline-block;
+	width:46px;
+	height:29px;
+	text-align: center;
+	/* color:#0078d0; */
+	line-height: 29px;
+	/* background:#0078d0; */
+}
+.prev,.next{
+	display:inline-block;
+	width:66px;
+	height:29px;
+	text-align: center;
+	/* color:#0078d0; */
+	line-height: 29px;
+	/* background:#0078d0; */
+}
+.first a,.last a,.prev a,.next a{
+	display:inline-block;
+	width:100%;
+	height:100%;
+	/* color: #fff; */
+}
+.active{
+	background:#2183e2;
+}
+.active a{
+	color: #fff;
+}
+#form1 .active a:hover{
+	color:#fff;
+}

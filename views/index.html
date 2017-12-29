@@ -1,0 +1,213 @@
+{{template "inc/T.hander.tpl" .}}
+    <title>Ustora Demo</title>
+
+  </head>
+  <body>
+    {{template "inc/T.item.tpl" .}}
+    {{template "inc/T.carticon.tpl" .}}
+   
+    <div class="mainmenu-area">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div> 
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">{{i18n .Lang "main"}}</a></li>
+                        <li><a href="shop.html">{{i18n .Lang "data_shop"}}</a></li>
+                        <li><a href="/single-product">{{i18n .Lang "product_details"}}</a></li>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+    </div> <!-- End mainmenu area -->
+    
+    <div class="slider-area"  style="width: 1161px;height: 362px">
+            <div class="block-slider block-slider4">
+                <ul class="" id="bxslider-home4">
+                    {{range .bannerdata}}
+                    <li>
+                        <img  src="../{{.ImgLocation}}" style="width: 1161px;height: 362px" alt="Slide">
+                        <div class="caption-group">
+                            <h2 class="caption title">
+                                {{.Key1}} <span class="primary">{{.Key2}} <strong>{{.Key3}}</strong></span>
+                            </h2>
+                            <h4 class="caption subtitle">{{.Primary}}</h4>
+                            <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                        </div>
+                    </li>
+                    {{end}}
+                    
+                </ul>
+            </div>
+    </div> <!-- End slider area  -->
+    
+    <div class="promo-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-promo promo1">
+                        <i class="fa fa-refresh"></i>
+                        <p>{{i18n .Lang "characteristic—_fast"}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-promo promo2">
+                        <i class="fa fa-truck"></i>
+                        <p>{{i18n .Lang "characteristic—_easy"}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-promo promo3">
+                        <i class="fa fa-lock"></i>
+                        <p>{{i18n .Lang "characteristic—_safe"}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="single-promo promo4">
+                        <i class="fa fa-gift"></i>
+                        <p>{{i18n .Lang "characteristic—_free"}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End promo area -->
+    
+   <div class="maincontent-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="latest-product">
+                        <h2 class="section-title">最新上架</h2>
+                        <div class="product-carousel">
+                            {{range .newdata8}}
+                            <div class="single-product">
+                                <div class="product-f-image">
+                                    <img src="../{{.ImgLocation}}" alt="" style="width: 215px;height: 262px">
+                                    <div class="product-hover">
+                                        <a href="/cart?op=add&dataId={{.Id}}&userId={{$.username}}" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> 加入购物车</a>
+                                        <a href="/index/details?id={{.Id}}" class="view-details-link"><i class="fa fa-link"></i> 查看详情</a>
+                                    </div>
+                                </div>
+                                
+                                <h2><a href="/single-product?id={{.Id}}">{{.Primary}}</a></h2>
+                                
+                                <div class="product-carousel-price">
+                                    <ins>￥{{.Price}}</ins> <del>￥{{.PriceNow}}</del>
+                                </div> 
+                            </div>
+                            {{end}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End main content area -->
+    
+    <div class="brands-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="brand-wrapper">
+                        <div class="brand-list">
+                            <img src="../static/img/brand1.png" alt="">
+                            <img src="../static/img/brand2.png" alt="">
+                            <img src="../static/img/brand3.png" alt="">
+                            <img src="../static/img/brand4.png" alt="">
+                            <img src="../static/img/brand5.png" alt="">
+                            <img src="../static/img/brand6.png" alt="">
+                            <img src="../static/img/brand1.png" alt="">
+                            <img src="../static/img/brand2.png" alt="">                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End brands area -->
+    
+    <div class="product-widget-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-product-widget">
+                        <h2 class="product-wid-title">实时热销榜</h2>
+                        <a href="" class="wid-view-more">View All</a>
+                        {{range .hotdata}}
+                        <div class="single-wid-product">
+                            <a href="single-product.html"><img src="../{{.ImgLocation}}" alt="" class="product-thumb"></a>
+                            <h2><a href="single-product.html">{{.Name}}</a></h2>
+                            <div class="product-wid-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product-wid-price">
+                                <ins>￥{{.Price}}</ins> <del>￥{{.PriceNow}}</del>
+                            </div>                            
+                        </div>
+                        {{end}}
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-product-widget">
+                        <h2 class="product-wid-title">最近浏览</h2>
+                        <a href="#" class="wid-view-more">View All</a>
+                        {{range .browsedata}}
+                        <div class="single-wid-product">
+                            <a href="single-product.html"><img src="../{{.ImgLocation}}" alt="" class="product-thumb"></a>
+                            <h2><a href="single-product.html">{{.Name}}</a></h2>
+                            <div class="product-wid-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product-wid-price">
+                                <ins>￥{{.Price}}</ins> <del>￥{{.PriceNow}}</del>
+                            </div>                            
+                        </div>
+                        {{end}}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-product-widget">
+                        <h2 class="product-wid-title">最新上架</h2>
+                        <a href="#" class="wid-view-more">View All</a>
+                        {{range .newdata}}
+                        <div class="single-wid-product">
+                            <a href="single-product.html"><img src="../{{.ImgLocation}}" alt="" class="product-thumb"></a>
+                            <h2><a href="single-product.html">{{.Name}}</a></h2>
+                            <div class="product-wid-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product-wid-price">
+                                <ins>￥{{.Price}}</ins> <del>￥{{.PriceNow}}</del>
+                            </div>                            
+                        </div>
+                        {{end}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End product widget area -->
+    
+
+{{template "inc/T.foot.tpl" .}}

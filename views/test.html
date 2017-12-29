@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+  	<head>
+    	<title>独孤影-登录</title>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://malsup.github.io/jquery.form.js"></script>
+		<style>
+		.center{
+			display: block;
+		    margin: 0 auto;
+		    position: relative;
+		    width: 300px;
+		    text-align: center;
+		}
+		.center .input{
+			width: 100%;
+		}
+		</style>
+	</head>
+  	<body>
+  		<div class="main">
+			<form action="/test" method="post" class="center" id="uploaddataform" name="uploaddataform">
+				<label for="">Login</label><br>
+				<input type="text" name="username" id="" class="input" placeholder="usernmae"><br>
+				<input type="password" name="password" id="" class="input" placeholder="password"><br>
+				<input type="submit" value="登录"><a href="/password/getback">找回密码</a>
+				<a href="/download">下载文件</a>
+			</form>
+		
+ 		</div>
+	</body>
+	<script>
+		$(document).ready(function(){
+		    $('#uploaddataform').bind('submit', function(){
+		        $(this).ajaxSubmit({ 
+		            success: function(data) { 
+		                    alert('提交成功！');
+		                 }
+		                 //$(this).resetForm(); // 提交后重置表单
+		        });
+		        return false
+		    });
+		});
+	</script>
+</html>
+

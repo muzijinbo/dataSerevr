@@ -1,0 +1,80 @@
+{{template "base/function.html" .}}
+{{define "title"}}
+<title>购物车</title>
+{{end}}
+
+{{define "functionname"}}
+<h2>购物车</h2>
+{{end}}
+{{define "content"}}
+
+  <div class="col-md-8">
+      <div class="product-content-right">
+          <div class="product-breadcroumb">
+              <a href="">主页</a>
+              <a href="">数据商城</a>
+              <a href="">购物车</a>
+              
+            <div class="woocommerce">
+               <form method="post" action="#">
+                   <table cellspacing="0" class="shop_table cart">
+                       <thead>
+                           <tr>
+                               <th class="product-remove">&nbsp;</th>
+                               <th class="product-thumbnail">商品</th>
+                               <th class="product-name">简介</th>
+                               <th class="product-price">单价</th>
+                               <th class="product-quantity">数量</th>
+                               <th class="product-subtotal">总价</th>
+                           </tr>
+                       </thead>
+                       <tbody>
+                          {{range .items}}
+                           <tr class="cart_item">
+                               <td class="product-remove">
+                                   <a title="Remove this item" class="remove" href="/cart?op=del&dataItemId={{.Id}}">×</a> 
+                               </td>
+
+                               <td class="product-thumbnail">
+                                   <a href="/index/details?id={{.Data.Id}}"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="../{{.Data.ImgLocation}}"></a>
+                               </td>
+
+                               <td class="product-name">
+                                   <a href="/index/details?id={{.Data.Id}}">{{.Data.Primary}}</a> 
+                               </td>
+
+                               <td class="product-price">
+                                   <span class="amount">{{.Data.PriceNow}}</span> 
+                               </td>
+
+                               <td class="product-quantity">
+                                   <div class="quantity buttons_added">
+                                       <input type="button" class="minus" value="-">
+                                       <input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
+                                       <input type="button" class="plus" value="+">
+                                   </div>
+                               </td>
+
+                               <td class="product-subtotal">
+                                   <span class="amount">
+                                   {{.Data.PriceNow}}</span> 
+                               </td>
+                           </tr>
+                           {{end}}
+
+                           <tr>
+                               <td class="actions" colspan="6">
+                                   <!-- <button  value="Checkout" name="proceed" class="checkout-button button alt wc-forward" >提交订单
+                                   </button> -->
+                                   <a href="/order" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">提交订单</a>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </form>
+
+          </div>
+
+             
+          </div>
+{{end}}

@@ -1,0 +1,83 @@
+{{template "base/function.html" .}}
+{{define "title"}}
+<title>我的订单</title>
+{{end}}
+
+{{define "functionname"}}
+<h2>我的订单</h2>
+{{end}}
+{{define "content"}}
+
+  <div class="col-md-8">
+      <div class="product-content-right">
+          <div class="product-breadcroumb">
+              <a href="">主页</a>
+              <a href="">数据商城</a>
+              <a href="">购物车</a>
+              <a href="">我的订单</a>
+              
+            <div class="woocommerce">
+               <form method="post" action="#">
+                   <table cellspacing="0" class="table table-condensed">
+                       <thead>
+                           <tr>
+                               <th class="product-remove">&nbsp;</th>
+                               <th class="product-thumbnail">商品</th>
+                               <th class="product-name">简介</th>
+                               <th class="product-price">单价</th>
+                               <th class="product-quantity">数量</th>
+                               <th class="product-subtotal">总价</th>
+                           </tr>
+                       </thead>
+                       <tbody>
+                          {{range .order.Data}}
+                           <tr class="cart_item">
+                               <td class="product-remove" >
+                                   <a title="Remove this item" class="remove" href="/cart?op=del&dataItemId={{.Id}}" style="line-height: 60px;display: block;">×</a> 
+                               </td>
+
+                               <td class="product-thumbnail">
+                                   <a href="/index/details?id={{.Id}}" style="line-height: 50px;display: block;"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="../{{.ImgLocation}}"></a>
+                               </td>
+
+                               <td class="product-name">
+                                
+                                   <a href="/index/details?id={{.Id}}" style="line-height: 50px;display: block;">{{.Primary}}</a> 
+                               </td>
+
+                               <td class="product-price">
+                                <br>
+                                   <span class="amount" style="line-height: 50px;display: block;">{{.PriceNow}}</span> 
+                               </td>
+
+                               <td class="product-quantity">
+                                <br>
+                                   <div class="quantity buttons_added" style="line-height: 50px;">
+                                       1
+                                   </div>
+                               </td>
+
+                               <td class="product-subtotal">
+                                <br>
+                                   <span class="amount" style="line-height: 50px;display: block;">
+                                   {{.PriceNow}}</span> 
+                               </td>
+                           </tr>
+                           {{end}}
+
+                           <tr>
+                               <td class="actions" colspan="6">
+                                <br>
+                                   <button  value="Checkout" name="proceed" class="btn btn-default" style="float: right;">立即支付
+                                   </button> 
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </form>
+
+          </div>
+
+             
+          </div>
+{{end}}

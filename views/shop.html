@@ -1,0 +1,205 @@
+{{template "inc/T.hander.tpl"}}
+    <title>Ustora Demo</title>
+
+  </head>
+  <body>
+   
+   {{template "inc/T.item.tpl" .}}
+    
+    <div class="site-branding-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo">
+                        <h1><a href="./"><img src="../static/img/logo.png"></a></h1>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6">
+                    <div class="shopping-item">
+                        <a href="/cart?userId={{.username}}">购物车<span class="cart-amunt">￥100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End site branding area -->
+
+    <div class="mainmenu-area" style="background-color: rgb(90, 136, 202);height: 60px">
+        <div class="container">
+            <div class="row" style="position: absolute; width: 500px;height: 60px;margin-top: 13px; margin-left: 300px">
+                <div class="input-group">
+                  <input type="text" class="form-control" aria-label="...">
+                  <div class="input-group-btn">
+                    <button class="btn btn-primary">
+                        搜索
+                    </button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <span type="button" class="btn btn-primary">（首选项）<a href="">x</a></span>
+        <span type="button" class="btn btn-primary">（首选项）<a href="">x</a></span>
+        <span type="button" class="btn btn-primary">（首选项）<a href="">x</a></span>
+    </div>
+
+    
+   <div class="">
+       <div class="container">
+           <div class="row">
+                <div class="navBox">
+                    <div class="navShop">
+                        <ul id="ul"> 
+                            {{range .classfies}}
+                            <li id="0">
+                                <span class="oneTit"><em id="">{{.Name}}</em></span>
+                                <span class="twoTit">
+                                    {{range .Children}}
+                                    <a href="javascript:void(0);" id="140" class="aa">{{.Name}}<em>×</em>
+                                    </a>
+                                    {{end}}
+                                </span>
+                            </li>
+                            {{end}}
+                                  
+                        </ul>
+                    </div>
+                </div>
+           </div>
+       </div>
+   </div> <!-- End mainmenu area -->
+
+    <div class="container">
+        <div class="row">
+            <div class="container-fluid">
+             <!-- Brand and toggle get grouped for better mobile display -->
+
+             <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                         <li class="active">
+                            <a href="#">综合 
+                                <span class="glyphicon glyphicon-arrow-down"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">人气
+                                <span class="glyphicon glyphicon-arrow-down"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">新品
+                                <span class="glyphicon glyphicon-arrow-down"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">销量
+                                <span class="glyphicon glyphicon-arrow-down"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                         <div class="form-group">
+                           <input type="text" style="width: 100px" class="form-control" placeholder="最低价">
+                         </div>
+                         -
+                         <div class="form-group">
+                           <input type="text" style="width: 100px" class="form-control" placeholder="最高价">
+                         </div>
+                         &nbsp
+                         <div class="checkbox">
+                             <label>
+                               <input type="checkbox" style="margin-top: -1px"> &nbsp折扣
+                             </label>
+                        </div>
+                        &nbsp
+                         <button type="submit" class="btn btn-defult btn-sm" style="height: 35px">
+                            筛选
+                         </button>
+                    </form>
+                    <ul class="pager navbar-right">             
+                        <li class="previous">
+                            <a href="#">
+                                <span aria-hidden="true">&larr;</span>
+                                前一页
+                            </a>
+                        </li>
+                        &nbsp&nbsp
+                        <li class="next">
+                            <a href="#">
+                                后一页
+                                <span aria-hidden="true">&rarr;
+                                </span>
+                            </a>
+                        </li>
+                          
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+       </div>
+   </div>
+
+    
+    <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                {{range .pagedatas}}
+                <div class="col-md-3 col-sm-6" >
+                    <div class="single-shop-product" >
+                        <div class="product-upper">
+                            <img src="../{{.ImgLocation}}" alt="" style="height:235px;width: 263px">
+                        </div>
+                        <h3 style="text-align: center;"><a href="">{{.Name}}</a></h3>
+                        <div class="product-carousel-price" style="text-align: center;">
+                            <ins>{{.Price}}</ins> <del>{{.PriceNow}}</del>
+                        </div>  
+                        
+                        <div class="product-option-shop" style="text-align: center;">
+                            <a class="add_to_cart_button btn" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">加入购物车</a>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            <a href="#">
+                                <span class="glyphicon glyphicon-heart" style="font-size: 19px;color: rgb(90, 136, 202);"></span>
+                            </a>
+                        </div>                       
+                    </div>
+                </div>
+                {{end}}
+                
+               
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-pagination text-center">
+                        <nav>
+                          <ul class="pagination">
+                            <li>
+                              <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                              </a>
+                            </li>
+                            <li><a href="/shop?page=1">1</a></li>
+                            <li><a href="/shop?page=2">2</a></li>
+                            <li><a href="/shop?page=3">3</a></li>
+                            <li><a href="/shop?page=4">4</a></li>
+                            <li><a href="/shop?page=5">5</a></li>
+                            <li><a href="/shop?page=6">6</a></li>
+                            <li><a href="/shop?page=7">7</a></li>
+                            <li><a href="/shop?page=8">8</a></li>
+                            <li>
+                              <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ {{template "inc/T.foot.tpl" .}}

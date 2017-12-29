@@ -1,0 +1,70 @@
+{{template "inc/T.hander.tpl" .}}
+   {{template "title" .}}
+  </head>
+  <body>
+   
+   {{template "inc/T.item.tpl" .}}
+    <div class="site-branding-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo">
+                        <h1><a href="./"><img src="../static/img/logo.png"></a></h1>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6">
+                    <div class="shopping-item">
+                        <a href="cart.html">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End site branding area -->
+    
+    
+    
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        {{template "functionname" .}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">  
+                    <div class="single-sidebar">
+                        <h2 class="sidebar-title">我的账户</h2>
+                        <ul>
+                            <li><a href="/myInfo">个人信息</a></li>
+                            <li><a href="/mybills">我的订单</a></li>
+                            <li><a href="/myMessage">我的收藏</a></li>
+                            <li><a href="/myMessage">我的足迹</a></li>
+                            <li><a href="/addApply">个性化定制数据</a></li>
+                            <li><a href="/crawl">爬取数据</a></li>
+                            <li><a href="/uploaddata">数据上传</a></li>
+                            <li><a href="/111">我的消息</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+               
+                <div class="col-md-8" style="width: 600px">
+                     <div class="product-content-right" style="width: 600px">
+                        
+                        {{template "content" .}}
+                    </div>
+                </div>
+        </div>
+    </div>
+
+   {{template "inc/T.foot.tpl" .}}

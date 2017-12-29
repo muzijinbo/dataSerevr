@@ -1,0 +1,152 @@
+{{template "inc/T.hander.tpl" .}}
+    {{template "title" .}}
+  </head>
+  <body>
+   
+   {{template "inc/T.item.tpl" .}}
+    <div class="site-branding-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo">
+                        <h1><a href="./"><img src="../static/img/logo.png"></a></h1>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6">
+                    <div class="shopping-item">
+                        <a href="cart.html">Cart - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End site branding area -->
+    
+    
+    
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>DataShop</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="single-product-area">
+        <div class="zigzag-bottom">
+        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">  
+                        <div class="single-sidebar">
+                            <h2 class="sidebar-title">我的账户</h2>
+                            <ul>
+                                <li><a href="/myInfo">个人信息</a></li>
+                                <li><a href="/myBills">我的订单</a></li>
+                                <li><a href="/myMessage">我的收藏</a></li>
+                                <li><a href="/myMessage">我的足迹</a></li>
+                                <li><a href="/addApply">个性化定制数据</a></li>
+                                <li><a href="/crawlerData">爬取数据</a></li>
+                                <li><a href="/uploaddata">数据上传</a></li>
+                                <li><a href="/111">我的消息</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-8">
+                         <div class="product-content-right">
+                             
+                        
+                        <div class="woocommerce-info">
+                        去数据商城看看？ <a class="showcoupon" data-toggle="collapse" href="/" aria-expanded="false" aria-controls="coupon-collapse-wrap">点击进行跳转</a>
+                        </div>
+                        <form enctype="multipart/form-data" action="/uploaddata/upload" class="checkout" method="post" id="uploaddataform" name="checkout" onsubmit="return submit();">
+
+                            <div id="customer_details" class="col2-set">
+                                <div class="col-1">
+                                    <div class="woocommerce-billing-fields">
+                                        <h3>上传数据</h3>
+                                        <p id="billing_country_field" class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
+                                            <label class="" for="billing_country">数据分类 <abbr title="required" class="required">*</abbr>
+                                            </label>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;一级分类：<select class="country_to_state country_select" id="class_first" name="classes1" onchange="addtoselect(this)">
+                                                <option value="" onselect="true">请选择</option>
+                                                {{range $index, $elem := .classes}}
+                                                <option value="{{$elem.Id}}">{{$elem.Name}}</option>
+                                                {{end}}
+                                            </select>
+                                            &nbsp;&nbsp;&nbsp;&nbsp; 二级分类：<select class="country_to_state country_select" id="class_second" name="classes2" style="display: none;">
+                                            </select>
+                                            
+                                        </p>
+
+                                        <p id="billing_company_field" class="form-row form-row-wide">
+                                            <label class="" for="billing_company">名称：</label>
+                                            <input class="form-control" type="input-text" name="name"></input>
+                                        </p>
+                                        <p id="billing_company_field" class="form-row form-row-wide">
+                                            <label class="" for="billing_company">简介：</label>
+                                            <input class="form-control" type="input-text" name="primary"></input>
+                                        </p>
+                                        <div class="clear"></div>
+
+                                        <p id="billing_company_field" class="form-row form-row-wide">
+                                            <label class="" for="billing_company">数据说明：</label>
+                                            <textarea class="form-control" name="introduce" rows="3"></textarea>
+                                        </p>
+                                        
+                                        
+                                        <div class="clear"></div>
+
+                                        <p id="billing_company_field" class="form-row form-row-wide">
+                                            <label class="" for="billing_company">选择文件</label>
+                                            <input type="file" value="" placeholder="" id="billing_company" name="myfile" class="input-text ">
+                                        </p>
+                                        <br>
+                                        <div class="create-account">
+                                            <p>提交需求，需要再次确认登陆，确认是否本人操作，请输入当前登录账号的密码</p>
+                                            <p id="account_password_field" class="form-row validate-required">
+                                                <label class="" for="account_password">Account password <abbr title="required" class="required">*</abbr>
+                                                </label>
+                                                <input type="password" value="" placeholder="Password" id="account_password" name="account_password" class="input-text">
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-2">
+                                    <div class="woocommerce-shipping-fields">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div id="order_review" style="position: relative;">
+
+                                    <div class="form-row place-order">
+
+                                        <button type="submit" data-value="Place order" value="确认提交" id="place_order" name="woocommerce_checkout_place_order" class="button alt">
+                                           确认提交 </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   {{template "inc/T.foot.tpl" .}}
